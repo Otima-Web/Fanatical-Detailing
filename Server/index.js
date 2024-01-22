@@ -324,10 +324,11 @@ app.post("/api/api/orders/:orderID/capture", async (req, res) => {
 });
 
 // ---------------------------------------------------------
-app.get('/api/', function (req, res) {
+app.get('/', function (req, res) {
   const message = "Status 200: OK" 
   res.json({ message })
 });
+
 app.get('/api/test/', function (req, res) {
   res.json({ message: "Server Up and Running" })
 });
