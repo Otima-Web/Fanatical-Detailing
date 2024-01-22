@@ -20,7 +20,11 @@ const app = express();
 const oAuth2Client = new google.auth.OAuth2(process.env.GOOGLE_CLIENT_ID, process.env.GOOGLE_CLIENT_SECRET, process.env.GOOGLE_REDIRECT)
 oAuth2Client.setCredentials({refresh_token: process.env.GOOGLE_REFRESH_TOKEN})
 
-app.use(cors());
+app.use(express.json());
+
+app.use(cors({
+  origin: '*',
+}));
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -192,8 +196,6 @@ const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET } = process.env;
 
 const base = "https://api-m.sandbox.paypal.com";
 
-// parse post params sent in body in json format
-app.use(express.json());
 
 /**
  * Generate an OAuth 2.0 access token for authenticating with PayPal REST APIs.
@@ -325,7 +327,7 @@ app.post("/api/api/orders/:orderID/capture", async (req, res) => {
 app.get('/api/', function (req, res) {
   res.json({ message: "Server Up and Running" })
 });
-app.post('/api/test', function (req, res) {
+app.post('/api/test/', function (req, res) {
   res.json({ message: "Server Up and Running" })
 });
 
