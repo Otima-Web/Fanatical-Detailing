@@ -9,7 +9,7 @@ function Footer() {
         <nav id='footer'>
             <section className='container'>
                 <div className='logo'>
-                    <i>[Logo]</i>
+                    <img src="images/logo.PNG" alt="" />
                 </div>
             </section>
             <section className='container'>
