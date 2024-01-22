@@ -23,17 +23,8 @@ oAuth2Client.setCredentials({refresh_token: process.env.GOOGLE_REFRESH_TOKEN})
 app.use(cors());
 app.use(bodyParser.json());
 
-var allowCrossDomain = function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', "*");
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-}
-
 app.post("/api/mail", async (req, res) => {
   const data = req.body.data; // This will contain the JSON data sent in the request
-
-  app.use(allowCrossDomain);
 
   if(data.captcha === '' || data.captcha === null || data.captcha === undefined){
     return res.json({'success':false})
