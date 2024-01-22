@@ -325,7 +325,7 @@ app.post("/api/api/orders/:orderID/capture", async (req, res) => {
 
 // ---------------------------------------------------------
 app.get('/api/', function (req, res) {
-  res.json({ message: "Server Up and Running" })
+  res.json({ message: "Status 200: OK" })
 });
 app.get('/api/test/', function (req, res) {
   res.json({ message: "Server Up and Running" })
