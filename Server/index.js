@@ -325,12 +325,12 @@ app.post("/api/api/orders/:orderID/capture", async (req, res) => {
 });
 
 // ---------------------------------------------------------
-app.post('/api/', function (req, res) {
+app.get('/api/', function (req, res) {
   const message = "Status 200: OK" 
   res.json({ message })
 });
 
-app.get('/api/test/', function (req, res) {
+app.post('/api/test/', function (req, res) {
   const message = "test successful" 
   res.json({ message })
 });
