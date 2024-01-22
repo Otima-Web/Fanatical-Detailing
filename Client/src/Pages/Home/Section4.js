@@ -58,6 +58,7 @@ function Section4(){
         try{
             fetch(`${SERVER}/mail/`, {
                 method: 'POST',
+                mode: 'cors',
                 headers: {
                   'Content-Type': 'application/json'
                 },
