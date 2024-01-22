@@ -333,6 +333,10 @@ app.get('/api/test/', function (req, res) {
   res.json({ message: "Server Up and Running" })
 });
 
+app.get('/test/', function (req, res) {
+  res.json({ message: "Server Up and Running" })
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
