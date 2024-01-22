@@ -21,6 +21,14 @@ const oAuth2Client = new google.auth.OAuth2(process.env.GOOGLE_CLIENT_ID, proces
 oAuth2Client.setCredentials({refresh_token: process.env.GOOGLE_REFRESH_TOKEN})
 
 app.use(cors());
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
+
 app.use(bodyParser.json());
 
 app.post("/api/mail", async (req, res) => {
