@@ -56,7 +56,7 @@ function Section4(){
         };
 
         try{
-            fetch(`${SERVER}/mail`, {
+            fetch(`${SERVER}/mail/`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'
