@@ -1,0 +1,49 @@
+
+@media (min-width:900px){
+    #Section5{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        justify-content: space-evenly;
+        margin-inline: 4vw;
+        padding: 10px;
+        padding-block: 5vh;
+    
+        & .container{
+            height: 210px;
+            width: fit-content;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    
+        & img{
+            object-fit: contain;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width:900px){
+    #Section5{
+        display: flex;
+        flex-wrap: nowrap;
+        height: fit-content;
+        overflow-x: scroll;
+        justify-content: left;
+        gap: 10px;
+        padding: 10px;
+        padding-block: 5vh;
+    
+        & .container{
+            height: 150px;
+            min-width: fit-content;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    
+        & img{
+            object-fit: contain;
+            height: 100%;
+        }
+    }
+}

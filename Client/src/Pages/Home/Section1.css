@@ -1,0 +1,63 @@
+#Section1{
+    display: flex;
+    padding-block: 80px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & h2{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+    }
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-block: 30px;
+    padding-inline: 5vw;
+    gap: 5vw;
+
+    & .tag{
+        border: 2px solid rgb(193, 55, 55);
+        color: rgb(193, 55, 55);
+        height: fit-content;
+        transition: 300ms;
+        border-radius: 20px;
+        padding-inline: 10px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        min-width: fit-content;
+        gap: 10px;
+        max-width: 15vw;
+
+        & p{
+            width: fit-content;
+            height: fit-content;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 100%;
+        }
+
+        & i{
+            font-size: 30px;
+        }
+
+        & .fa-arrows-spin{
+            animation-name: rotate;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-delay: 0s;
+        }
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(-360deg);
+    }
+}

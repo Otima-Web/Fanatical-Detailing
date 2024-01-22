@@ -1,0 +1,69 @@
+@media (max-width:900px){
+    #LP{
+        display: flex;
+        margin-top: 80px;
+        position: relative;
+        width: 110vw;
+        left: -6%;
+        padding: 5px;
+        background-color: black;
+        min-height: 30px;
+        max-height: 400px;
+        height: 30vh;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    
+        & .contain{
+            animation: present 600ms ease 1s 1 forwards;
+            display: block;
+            position: relative;
+            opacity: 0;
+    
+            & video{
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width:901px){
+    #LP{
+        display: flex;
+        margin-top: 80px;
+        position: relative;
+        width: 110vw;
+        left: -6%;
+        padding: 5px;
+        background-color: black;
+        min-height: 400px;
+        max-height: 500px;
+        height: 50%;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    
+        & .contain{
+            animation: present 600ms ease 1s 1 forwards;
+            display: block;
+            position: relative;
+            opacity: 0;
+    
+            & video{
+                object-fit: cover;
+                height: 100%;
+                position: relative;
+            }
+        }
+    }
+}
+
+@keyframes present{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

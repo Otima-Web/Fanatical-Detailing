@@ -1,0 +1,318 @@
+#Section4{
+    & .image{
+        display: flex;
+        position: relative;
+        max-height: 600px;
+        height: fit-content;
+        margin: auto;
+        width: 100%;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-left: 10px;
+
+        & .imager{
+            display: flex;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            max-height: 600px;
+            margin: auto;
+            overflow: hidden;
+
+            & img{
+                object-fit:contain;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .tags{
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            backdrop-filter: blur(8px);
+            border-left: 10px solid #2a2a2a;
+            border-top: 8px solid #2a2a2a;
+            border-top-left-radius: 15px;
+
+            & .fa-instagram{
+                color: white;
+                font-size: 50px;
+                font-weight: 600;
+                padding: 8px;
+                border-radius: 10px;
+            }
+
+            & .call-btn{
+                text-decoration: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: rgb(181, 79, 79);
+                color: white;
+                height: fit-content;
+                border: none;
+                gap: 10px;
+                font-size: 15px;
+                border-radius: 15px;
+                padding-inline: 10px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: 600;
+                cursor: pointer;
+                box-shadow: 0px 0px 5px black;
+            }
+        }
+    }
+
+    #right{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        color: whitesmoke;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+        & h4{
+            font-size: 20px;
+            height: fit-content;
+            margin-block: 10px;
+        }
+
+        & form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 5px;
+            padding-bottom: 5vh;
+            
+            & button{
+                background-color: rgb(181, 79, 79);
+                color: whitesmoke;
+                border: none;
+                border-radius: 10px;
+                font-size: 16px;
+                width: fit-content;
+                padding-inline: 20px;
+                padding-block: 5px;
+                margin:auto;
+                cursor: pointer;
+            }
+
+            & #selector{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            & .selections{
+                display: flex;
+                flex-direction: column;
+
+                & section{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+                }
+                & .box{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    justify-content: center;
+                    align-items: center;
+                    height: fit-content;
+                    width: fit-content;
+                    gap: 5px;
+
+                    & input{
+                        margin:auto;
+                    }
+                }
+            }
+
+            & .info{
+
+                & #services{
+                    appearance: none;
+                    -webkit-appearance: none;
+                    font-size: 15px;
+                    padding: 10px;
+                    background-color: #fff;
+                    border: 1px solid #caced1;
+                    border-radius: 0.25rem;
+                    color: #000;
+                    cursor: pointer;                
+                }
+
+                .default{
+                    color: rgba(0, 0, 0, 0.608);
+                }
+            }
+
+            & #interest-Form{
+                display: flex;
+                width: fit-content;
+                margin-inline: auto;
+                transform: scale(0.7);
+                background-color: black;
+                color: black;
+            }
+        }
+
+        .name{
+            display: flex;
+            gap: 20px;
+        }
+
+        .email{
+            width: 80%;
+            margin: auto;
+        }
+
+        .phone{
+            width: 65%;
+            margin:auto;
+        }
+
+        & .name input, .info input, .email input, .phone input{
+            border: none;
+            font-size: 15px;
+            border-bottom: 3px solid white;
+            border-radius:1px;
+            padding: 5px;
+            width: 100%;
+            background-color: transparent;
+            transition: 300ms;
+            color: whitesmoke;
+
+            &::placeholder{
+                color: whitesmoke;
+                opacity: 0.8;
+            }
+
+            &:focus{
+                color: black;
+                background-color: white;
+                background-color: whitesmoke;
+
+            &::placeholder{
+                color: black;
+                opacity: 0.4;
+            }
+            }
+        }
+
+        .addInfo{
+             & textarea{
+                font-size: 15px;
+                border-radius: 5px;
+                border: 3px solid whitesmoke;
+                background-color: transparent;
+                height:80px;
+                width: 90%;
+                padding: 5px;
+                transition: 300ms;
+                resize: none;
+                color: whitesmoke;
+
+                &::placeholder{
+                    color: whitesmoke;
+                    position: relative;
+                    font-size: 20px;
+                    top: 30%;
+                    left: 10%;
+                    transition: 300ms;
+                    margin: auto;
+                }
+    
+                &:focus{
+                    border: 3px solid whitesmoke;
+                    background-color: whitesmoke;
+                    color: black;
+
+                    &::placeholder{
+                        color: black;
+                        font-size: 15px;
+                        top: 0;
+                        left:0;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+
+    #thankYou{
+        flex-direction: column;
+        margin: auto;
+        justify-content:space-between;
+        align-items: center;
+        display: none;
+        color: whitesmoke;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        gap: 30px;
+
+        h2{
+            font-size: 40px;
+        }
+
+        .warning{
+            background-color: rgba(0, 0, 0, 0.353);
+            color: rgb(255, 255, 188);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        & p, h2{
+            margin: auto;
+            height: fit-content;
+            width: fit-content;
+            text-align: center;
+        }
+    }
+
+}
+
+@keyframes pop {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity:0.6;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
+
+@media (max-width:900px) {
+    #Section4 .image{
+        display: none;
+    }
+
+    #Section4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        background-color: #2a2a2a;
+        height: fit-content;
+    }
+}
+
+@media (min-width:901px) {
+    #Section4{
+        display: grid;
+        grid-template-columns: 45vw 55vw;
+        background-color: #2a2a2a;
+        padding: 15px;
+        gap: 15px;
+        height: fit-content;
+    }
+}
