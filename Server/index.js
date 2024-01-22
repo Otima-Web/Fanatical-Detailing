@@ -50,10 +50,10 @@ app.post("/api/mail", async (req, res) => {
   &remoteip=${req.socket.remoteAddress}`
 
   request(verify, async (err, reponse, body) => {
-    body = JSON.parse(body)
+    body = JSON.parse(body);
 
     if(body.success  !== undefined && !body.success){
-      return res.json({'success':false}) 
+      return res.json({'success':false}) ;
     }
 
   var receipt = {
@@ -66,6 +66,7 @@ app.post("/api/mail", async (req, res) => {
     <p>We look foward to chatting with you soon.</p>
     <p></br>Sincerely, Fanatical Detailing</p>`
   }
+  
   var loggingData = {
     from: process.env.EMAIL,
     to: process.env.EMAIL,
