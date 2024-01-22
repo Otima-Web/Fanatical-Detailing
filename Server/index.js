@@ -23,7 +23,7 @@ oAuth2Client.setCredentials({refresh_token: process.env.GOOGLE_REFRESH_TOKEN})
 app.use(cors());
 app.use(bodyParser.json());
 
-app.post("/api/mail", async (req, res) => {
+app.post("/api/mail/", async (req, res) => {
   const data = req.body.data; // This will contain the JSON data sent in the request
 
   if(data.captcha === '' || data.captcha === null || data.captcha === undefined){
@@ -111,7 +111,7 @@ app.post("/api/mail", async (req, res) => {
 })
 });
 
-app.post("/api/interest", async (req, res) => {
+app.post("/api/interest/", async (req, res) => {
   const data = req.body.data; // This will contain the JSON data sent in the request
 
   const accessToken = await oAuth2Client.getAccessToken()
