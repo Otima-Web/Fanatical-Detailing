@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import "./PopUp.css";
 
-const SERVER = 'https://fanaticaldetailing.com/api'
+const SERVER = 'http://fanaticaldetailing.com/api'
 // const SERVER = 'http://localhost:8080/api'
 
 const PopUp = ({setPopUp, popUp, selected}) =>{

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./Section4.css"
 
-const SERVER = 'https://fanaticaldetailing.com/api'
+const SERVER = 'http://fanaticaldetailing.com/api'
 // const SERVER = 'http://localhost:8080/api'
 
 function Section4(){

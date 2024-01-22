@@ -66,7 +66,7 @@ app.post("/api/mail", async (req, res) => {
     <p>We look foward to chatting with you soon.</p>
     <p></br>Sincerely, Fanatical Detailing</p>`
   }
-  
+
   var loggingData = {
     from: process.env.EMAIL,
     to: process.env.EMAIL,
