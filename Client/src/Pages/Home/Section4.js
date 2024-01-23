@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "./Section4.css"
 
-// const SERVER = 'https://fanaticaldetailing.com/api'
-const SERVER = 'http://localhost:8080/api'
+const SERVER = 'https://fanaticaldetailing.com/api'
+// const SERVER = 'http://localhost:8080/api'
 
 function Section4(){
     const [firstName, setFirstName] = useState("");
